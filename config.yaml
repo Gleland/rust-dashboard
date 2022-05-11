@@ -1,0 +1,41 @@
+title: "Rust dashboard"
+subtitle: "Inspired by Homer Dashboard"
+logo: "TBD"
+icon: "TBD"
+header: true
+theme: default # TODO
+links:
+  - name: "Github"
+    icon: "TBD"
+    url: "https://github.com/example"
+groups:
+  - name: "Networking"
+    icon: "TBD"
+    items:
+      - name: "Foo"
+        icon: "TBD"
+        subtitle: "subtitle example"
+        url: "https://google.com"
+      - name: "Bar"
+        logo: "TBD"
+        icon: "TBD"
+        subtitle: "subtitle example"
+        url: "https://google.com"
+  - name: "Hosts"
+    icon: "TBD"
+    items:
+      - name: "test"
+        icon: "TBD"
+        subtitle: "subtitle example"
+        url: "https://google.com"
+  - name: "Applications"
+    icon: "TBD"
+    items:
+      - name: "LDAP"
+        icon: "TBD"
+        subtitle: "subtitle example"
+        url: "https://google.com"
+      - name: "Pi-hole"
+        icon: "TBD"
+        subtitle: "subtitle example"
+        url: "https://google.com"

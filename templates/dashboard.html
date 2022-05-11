@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+<body>
+  <div id="app" class="theme-default is-dark">
+    <div id="bighead">
+      <section class="first-line">
+          <div class="container">
+              <div class="logo">
+                <a href="#">
+                    <img src="{{site_config.logo}}" alt="dashboard logo">
+                </a>
+              </div>
+              <div class="dashboard-title no-logo">
+                  <span class="headline">{{site_config.subtitle}}</span>
+                  <h1>{{site_config.title}}</h1>
+                </a>
+              </div>
+          </div>
+      </section>
+      <div class="container-fluid">
+        <nav role="navigation" aria-label="main navigation" class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <!-- TODO add content to navbar -->
+                    <a role="button" aria-label="menu" aria-expanded="false" class="navbar-burger">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <section id="main-section" class="section">
+      <div class="container">
+          <div>
+        <div class="columns is-multiline layout-vertical">
+          {% for group in site_config.groups %}
+          <div class="column is-4"> <!-- TODO auto-calculate the numb of columns needed -->
+            <h2 class="group-title"><i class="fa-fw fas fa-cloud"></i>{{group.name}}</h2>
+          <div>
+          {% for item in group.items %}
+            <div class="card">
+                <a href="{{item.url}}" target="_blank" rel="noreferrer">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <i class="fa-fw fas fa-network-wired" style="font-size: 35px;"></i>
+                    </figure>
+                  </div>
+                 <div class="media-content">
+                     <p class="title is-4">{{item.name}}</p>
+                     <p class="subtitle is-6">{{item.subtitle}}</p>
+                 </div>
+               </div>
+             </div>
+             </a>
+           </div>
+           {% endfor %}
+          </div>
+        </div>
+    {% endfor %}
+          </div>
+    </section id="main-section" class="section">
+  </div>
+  </body>
+</html>
